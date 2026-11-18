@@ -1,0 +1,8 @@
+embedding:
+  provider: openai
+
+  openai:
+    model: text-embedding-3-small
+
+  gemini:
+    model: models/gemini-embedding-2
