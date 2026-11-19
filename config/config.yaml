@@ -6,3 +6,13 @@ embedding:
 
   gemini:
     model: models/gemini-embedding-2
+
+hybrid:
+  k_semantic: 5
+  k_sparse: 5
+
+  weights:
+    semantic: 0.6
+    bm25: 0.4
+
+  normalize: true

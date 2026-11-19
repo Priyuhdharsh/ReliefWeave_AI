@@ -17,8 +17,22 @@ class EmbeddingConfig(BaseModel):
     gemini: ProviderModelConfig
 
 
+class HybridWeights(BaseModel):
+    semantic: float
+    bm25: float
+
+
+class HybridConfig(BaseModel):
+    k_semantic: int
+    k_sparse: int
+    weights: HybridWeights
+    normalize: bool
+
+
 class AppConfig(BaseModel):
     embedding: EmbeddingConfig
+    hybrid: HybridConfig
+
 
 def load_config():
     if not CONFIG_PATH.exists():
